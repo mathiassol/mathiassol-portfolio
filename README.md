@@ -1,23 +1,6 @@
-# Mathias Sol — portfolio
+# Mathias Sol — portfolio app
 
-Personal portfolio Worker. Deployed on [mathiassol.dev](https://mathiassol.dev) via the platform (external repo deploy). This repo stays free of Cloudflare secrets.
-
-## `ms.json`
-
-```json
-{
-  "name": "portfolio",
-  "endpoints": [
-    { "slug": "portfolio", "kind": "path", "title": "Portfolio", "visibility": "public", "inNav": true },
-    { "slug": "app", "kind": "subdomain", "host": "app", "title": "App", "visibility": "public", "inNav": true }
-  ]
-}
-```
-
-- `path` → `mathiassol.dev/portfolio`
-- `subdomain` → `app.mathiassol.dev`
-
-Platform Sync attaches routes/domains; Deploy only ships code.
+External Worker for [mathiassol.dev](https://mathiassol.dev). Config and deploys: see **[CLAUDE.md](./CLAUDE.md)**.
 
 ## Local
 
@@ -26,6 +9,4 @@ pnpm install
 pnpm dev
 ```
 
-## Production
-
-Dashboard → source **github** → pick this repo (no slug in the UI). Endpoints come from `ms.json`.
+Production URL (after Sync + Deploy): https://app.mathiassol.dev

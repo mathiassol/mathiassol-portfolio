@@ -2,13 +2,6 @@
   "name": "portfolio",
   "endpoints": [
     {
-      "slug": "portfolio",
-      "title": "Portfolio",
-      "kind": "path",
-      "visibility": "public",
-      "inNav": true
-    },
-    {
       "slug": "app",
       "title": "App",
       "kind": "subdomain",
