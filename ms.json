@@ -4,6 +4,15 @@
     {
       "slug": "portfolio",
       "title": "Portfolio",
+      "kind": "path",
+      "visibility": "public",
+      "inNav": true
+    },
+    {
+      "slug": "app",
+      "title": "App",
+      "kind": "subdomain",
+      "host": "app",
       "visibility": "public",
       "inNav": true
     }

@@ -4,18 +4,20 @@ Personal portfolio Worker. Deployed on [mathiassol.dev](https://mathiassol.dev) 
 
 ## `ms.json`
 
-Platform reads this file for Worker name + routes. Add more endpoint objects to expose extra paths on the same Worker:
-
 ```json
 {
   "name": "portfolio",
   "endpoints": [
-    { "slug": "portfolio", "title": "Portfolio", "visibility": "public", "inNav": true }
+    { "slug": "portfolio", "kind": "path", "title": "Portfolio", "visibility": "public", "inNav": true },
+    { "slug": "app", "kind": "subdomain", "host": "app", "title": "App", "visibility": "public", "inNav": true }
   ]
 }
 ```
 
-Optional `"build": "npm ci && npm run build"` runs in CI before `wrangler deploy`.
+- `path` → `mathiassol.dev/portfolio`
+- `subdomain` → `app.mathiassol.dev`
+
+Platform Sync attaches routes/domains; Deploy only ships code.
 
 ## Local
 
