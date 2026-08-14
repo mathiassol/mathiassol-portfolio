@@ -1,0 +1,11 @@
+{
+  "name": "portfolio",
+  "endpoints": [
+    {
+      "slug": "portfolio",
+      "title": "Portfolio",
+      "visibility": "public",
+      "inNav": true
+    }
+  ]
+}

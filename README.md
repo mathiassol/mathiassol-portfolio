@@ -2,6 +2,21 @@
 
 Personal portfolio Worker. Deployed on [mathiassol.dev](https://mathiassol.dev) via the platform (external repo deploy). This repo stays free of Cloudflare secrets.
 
+## `ms.json`
+
+Platform reads this file for Worker name + routes. Add more endpoint objects to expose extra paths on the same Worker:
+
+```json
+{
+  "name": "portfolio",
+  "endpoints": [
+    { "slug": "portfolio", "title": "Portfolio", "visibility": "public", "inNav": true }
+  ]
+}
+```
+
+Optional `"build": "npm ci && npm run build"` runs in CI before `wrangler deploy`.
+
 ## Local
 
 ```bash
@@ -9,9 +24,6 @@ pnpm install
 pnpm dev
 ```
 
-## Production (via platform)
+## Production
 
-1. Dashboard → create endpoint, source **github**, pick `mathiassol/mathiassol-portfolio`
-2. Or hit **Deploy** on an existing endpoint
-
-Optional build is not required for this Worker.
+Dashboard → source **github** → pick this repo (no slug in the UI). Endpoints come from `ms.json`.
