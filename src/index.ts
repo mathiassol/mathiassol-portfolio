@@ -182,7 +182,7 @@ app.get("*", (c) =>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;600&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet" />
-    <script type="module" src="https://mathiassol.dev/_shell/v1/topbar.js"></script>
+    <script type="module" src="/_shell/v1/topbar.js"></script>
     <style>${css}</style>
   </head>
   <body>
